@@ -1,0 +1,179 @@
+/* =====================
+   Global
+   ===================== */
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "Iosevka Nerd Font";
+  font-family: "FiraCode Nerd Font";
+  font-size: 12px;
+  min-height: 0;
+}
+
+
+window#waybar {
+  background: rgba(0, 0, 0, 0.0);
+}
+
+/* =====================
+   Workspaces
+   ===================== */
+
+#workspaces {
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.0);
+  font-weight: bold;
+}
+
+#workspaces button {
+  padding: 0px 4px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.0);
+  color: #cdd6f4;
+  transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+  color: #22c219;
+  font-weight: bold;
+}
+
+#workspaces button:hover {
+  opacity: 0.2;
+}
+
+/* =====================
+   Window title
+   ===================== */
+#window {
+  padding: 0 6px;
+  color: #0ddb29;
+  font-weight: bold;
+}
+
+/* =====================
+   Right modules (shared)
+   ===================== */
+#network,
+#pulseaudio,
+#battery,
+#tray,
+#custom-power
+#clock {
+  padding: 0 6px;
+  margin: 0;
+  font-weight: bold;
+}
+
+#clock {
+  color: #e3dc05;
+  padding: 0 6px;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Hover effect */
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#custom-lock:hover,
+#custom-sleep:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* =====================
+   Network
+   ===================== */
+
+/* Strong signal */
+#network.good {
+    color: #0b9600;   /* green */
+}
+
+/* Medium signal */
+#network.warning {
+    color: #d6be04;   /* yellow */
+}
+
+/* Weak signal */
+#network.critical {
+    color: #e30505;   /* red */
+}
+
+/* Ethernet */
+#network.ethernet {
+    color: #0246b5;   /* blue */
+}
+
+#network.disconnected {
+  color: transparent;
+}
+
+/* =====================
+   Audio
+   ===================== */
+
+#pulseaudio {
+  color: #0ddb29;
+  font-weight: bold;
+}
+
+#pulseaudio.muted {
+  color: #db0d0d;
+  font-weight: bold;
+}
+
+/* =====================
+   Battery
+   ===================== */
+/* full / high */
+#battery.full {
+    color: #a6e3a1; /* green */
+}
+
+/* normal */
+#battery:not(.warning):not(.critical):not(.charging) {
+    color: #edeff2; /* white */
+}
+
+
+/* critical */
+#battery.critical {
+    color: #cc0606; /* red */
+    animation: blink 1s infinite;
+}
+
+/* charging */
+#battery.charging {
+    color: #06c416; /* green */
+}
+
+/* plug AC but full */
+#battery.plugged {
+    color: #17910d; /*green*/
+}
+
+/* =====================
+   Custom buttons
+   ===================== */
+#custom-power {
+  color: #eff705;
+  font-weight: bold;
+}
+
+
+/* =====================
+   System tray
+   ===================== */
+#tray {
+  padding: 0 6px;
+}
+
+#tray > .passive {
+  opacity: 0.6;
+}
+
+#tray > .needs-attention {
+  background: #f38ba8;
+}
+
