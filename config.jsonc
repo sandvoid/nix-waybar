@@ -1,6 +1,6 @@
 {
-  "layer": "top",
-  "position": "top",
+  "layer": "bottom",
+  "position": "bottom",
   "font": "Iosevka Nerd Font 10",
   "modules-left": ["hyprland/window"],
   "modules-center": ["hyprland/workspaces"],
@@ -40,7 +40,7 @@
     "format": "{icon}",
     "format-muted": " 󰖁 ",           
     "format-icons": {             
-    "default": [" ", " "],
+    "default": ["", " "],
   },
     "on-click": "pavucontrol"
 },
@@ -49,7 +49,7 @@
   "battery": {
     "format": "{icon}",
     "tooltip": true,
-    "format-charging": "  ",
+    "format-charging": " ",
     "format-icons":  [" ", " ", " ", " ", " "]
 },
    
