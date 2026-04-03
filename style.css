@@ -89,7 +89,7 @@ window#waybar {
 
 /* Strong signal */
 #network.good {
-    color: #0b9600;   /* green */
+    color: #0ddb29;   /* green */
 }
 
 /* Medium signal */
